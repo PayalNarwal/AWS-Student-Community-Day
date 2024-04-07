@@ -36,6 +36,7 @@
         <a href="#sponsors">Sponsors</a>
         <a href="#team">Team</a>
         <a href="#venue">Venue</a>
+        <a href="#faq">FAQ</a>
       </div>
 
       <main>
@@ -912,6 +913,65 @@
             </div>
           </div>
         </section>
+      <!-- Faq section -->
+      <section  id="faq" class="faq-section">
+        <div class="accordion">
+          <div class="image-box">
+            <img src="./assets/faq/faq2.png" alt="">
+          </div>
+          <div class="accordion-text">
+            <div class="title">FAQ</div>
+          <ul class="faq-text">
+            <li>
+              <div class="question-arrow">
+                <span class="question">What is AWS Student Community Day?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>AWS Student Community Day is an event organized by the AWS Cloud Club at IGDTUW, aimed at exploring the latest trends, innovations, and best practices in cloud computing offered by Amazon Web Services (AWS).</p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">Who can attend AWS Student Community Day?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>AWS Student Community Day is open to students, professionals, and enthusiasts interested in learning about AWS cloud services and expanding their knowledge in this domain.</p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">What can I expect from AWS Student Community Day?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>Attendees can expect insightful speaker sessions delivered by certified industry experts, engaging discussions, hands-on workshops, networking opportunities, team lunches, evening snacks, and exciting surprises!</p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">Will there be certificates provided for attending AWS Student Community Day?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>Yes, certificates of participation will be provided to all registered attendees of AWS Student Community Day.</p>
+            </li> 
+            
+          </ul>
+        </div>
+      </div>
+        <script>
+          let li = document.querySelectorAll(".faq-text li");
+          for (var i = 0; i < li.length; i++) {
+            li[i].addEventListener("click", (e)=>{
+              let clickedLi;
+              if(e.target.classList.contains("question-arrow")){
+                clickedLi = e.target.parentElement;
+              }else{
+                clickedLi = e.target.parentElement.parentElement;
+              }
+             clickedLi.classList.toggle("showAnswer");
+            });
+          }
+        </script>
+      </section>
       </main>
 
       <div class="footer">
