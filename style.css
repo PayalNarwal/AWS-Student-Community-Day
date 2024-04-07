@@ -847,3 +847,70 @@ iframe {
   text-decoration: none;
   font-weight: bold;
 }
+
+
+
+
+/* MY code STARTS*/
+
+.faq-section {
+  margin-bottom: 50px;
+  font-family: 'Baloo Bhai 2', sans-serif;
+  
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+  text-align: center;
+   
+}
+
+.faq-section h2 img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.faq-section h2 {
+  font-size: 36px;
+  color: #fff;
+  background-color: #233141ff; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0;
+  transition: font-size 0.3s ease;
+  
+}
+
+.faq-section details {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+ 
+}
+
+.faq-section summary {
+  cursor: pointer;
+  outline: none;
+}
+
+.faq-section details[open] summary {
+  font-weight: bold;
+}
+
+.faq-section summary:hover {
+  color: #ff9900;
+  font-size: 20px;
+  font-weight: 100px; 
+  background-color:rgba(235, 229, 218, 0.842)
+
+  
+}
+ h2{
+  text-align: center;
+  text-decoration: underline;
+
+ }
+ /* MY CODE ENDS */
