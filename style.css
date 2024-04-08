@@ -818,6 +818,77 @@ iframe {
   font-size: 1.8em;
   text-transform: uppercase;
 }
+ 
+/* Faq changes made by Advika Singhal */
+
+.faq-section {
+  background-color: #101f2f;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.faq-section h2{
+  color: #fff;
+  text-decoration: underline 5px  rgb(114, 14, 134);
+  text-underline-offset: 7px;
+}
+
+.faq-item {
+  margin-bottom: 20px; 
+  width: 80%; 
+  margin: 0 auto;
+  padding: 20px; 
+}
+
+
+.toggle-icon-container {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px; 
+  height: 24px;
+  transition: transform 0.3s ease; 
+}
+.question {
+  cursor: pointer; 
+  color: #fff; 
+  font-size: larger;
+  margin-bottom: 10px; 
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  vertical-align: center;
+  text-align: center;
+  position: relative;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+}
+
+ .answer {
+  display: none;
+  color: #fff; 
+  font-style: italic; 
+  text-align: center;
+}
+.faq-toggle {
+  display: none;
+}
+.faq-toggle:checked ~ .answer {
+  display: block;
+}
+
+.question-text{
+  margin-left: 20px;
+}
+.toggle-icon{
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  transform-origin: center center ;
+}
+.faq-toggle:checked ~   .question .toggle-icon {
+  transform: rotateX(180deg);
+}
 
 
 .footer {
