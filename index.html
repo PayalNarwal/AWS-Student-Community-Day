@@ -912,6 +912,169 @@
             </div>
           </div>
         </section>
+
+         <section id="faq" class="faq-section">
+          <h2 class="sub-heading">FAQ</h2>
+          <div class="faq-content">
+            <div class="faq-item">
+              <div class="question">
+                <h3>How do I register for the event?</h3>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="answer">
+                <p>To register for the event, simply click on the "Register Now" button on the homepage and follow the instructions.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="question">
+                <h3>What are the event timings?</h3>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="answer">
+                <p>The event starts at 9:00 AM and ends at 5:00 PM.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="question">
+                <h3>Is there parking available at the venue?</h3>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="answer">
+                <p>Yes, there is ample parking available at the venue. However, it may be limited, so we recommend arriving early.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="question">
+                <h3>Can I bring a guest to the event?</h3>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="answer">
+                <p>Yes, you can bring a guest to the event. However, please make sure to register them in advance to ensure they have access.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="question">
+                <h3>Are meals provided during the event?</h3>
+                <i class="fas fa-plus"></i>
+              </div>
+              <div class="answer">
+                <p>Yes, meals will be provided during the event. There will be breakfast, lunch, and snacks available for all attendees.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <style>
+          .faq-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+          }
+
+          .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+          }
+
+          .faq-item:last-child {
+            border-bottom: none;
+          }
+
+          .question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .question h3 {
+            margin: 0;
+            color: #333;
+          }
+
+          .answer {
+            display: none;
+          }
+
+          .answer p {
+            margin: 0;
+          }
+
+          .fas.fa-plus {
+            display: none; 
+          }
+
+          .fas.fa-minus {
+            display: none; 
+          }
+
+          .question::after {
+            content: "\f078"; 
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: 16px;
+            color: #333; 
+            margin-left: 10px;
+          }
+
+
+          .navbar a[href="#faq"] {
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+          }
+
+          .navbar a[href="#faq"]:hover {
+            color: #232f3e;
+          }
+          </style>
+      <script>  
+        document.addEventListener('DOMContentLoaded', function() {
+          const faqLink = document.querySelector('a[href="#faq"]');
+          const faqSection = document.getElementById('faq');
+
+          faqLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            faqSection.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const questions = document.querySelectorAll('.faq-item .question');
+
+          questions.forEach(function(question) {
+            question.addEventListener('click', function() {
+              const answer = this.nextElementSibling;
+              answer.classList.toggle('show');
+              this.querySelector('i').classList.toggle('fa-plus');
+              this.querySelector('i').classList.toggle('fa-minus');
+            });
+          });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          const questions = document.querySelectorAll(".question");
+
+          questions.forEach(function (question) {
+            question.addEventListener("click", function () {
+              const answer = this.nextElementSibling;
+              const icon = this.querySelector("i");
+
+              if (answer.style.display === "block") {
+                answer.style.display = "none";
+                icon.classList.remove("fa-minus");
+                icon.classList.add("fa-plus");
+              } else {
+                answer.style.display = "block";
+                icon.classList.remove("fa-plus");
+                icon.classList.add("fa-minus");
+              }
+            });
+          });
+        });
+      </script>
+
       </main>
 
       <div class="footer">
