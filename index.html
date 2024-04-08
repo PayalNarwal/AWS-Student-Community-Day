@@ -912,6 +912,25 @@
             </div>
           </div>
         </section>
+
+        <section class="faq">
+          <h1 style="text-align: center; color: #e68a00">Frequently Asked Questions</h1>
+          <hr>
+          <div class="question" onclick="toggleAnswer('answer1')">Question 1: What is AWS Cloud Club?</div>
+          <div class="answer" id="answer1">AWS Cloud Club is a community-driven organization focused on promoting knowledge sharing and collaboration among individuals interested in Amazon Web Services (AWS). We provide opportunities for members to learn about AWS services, best practices, and industry trends through workshops, webinars, meetups, and hackathons.</div>
+          <hr>
+          <div class="question" onclick="toggleAnswer('answer2')">Question 2: How can I join AWS Cloud Club?</div>
+          <div class="answer" id="answer2">You can join AWS Cloud Club by applying when recruiting forms are circulated. Keep an eye out for announcements about recruitment opportunities through our website, social media channels, or community newsletters.</div>
+          <hr>
+          <div class="question" onclick="toggleAnswer('answer3')">Question 3: What benefits do AWS Cloud Club members receive?</div>
+          <div class="answer" id="answer3"> AWS Cloud Club members enjoy a range of benefits, including access to educational resources, networking opportunities with industry professionals, discounts on training courses and certification exams, and invitations to exclusive events and workshops. </div>
+          <hr>
+          <div class="question" onclick="toggleAnswer('answer4')">Question 4: Can I attend AWS Cloud Club events if I'm new to AWS?</div>
+          <div class="answer" id="answer4"> Absolutely! AWS Cloud Club welcomes individuals of all skill levels, including beginners who are just getting started with AWS. </div>
+          <hr>
+          
+        </section>
+        
       </main>
 
       <div class="footer">
@@ -987,5 +1006,19 @@
 
       gtag("config", "G-KNX3BXYLTF");
     </script>
+
+    <!-- FAQ Section -->
+    <script>
+      // JavaScript to toggle answer visibility
+      function toggleAnswer(answerId) {
+          var answer = document.getElementById(answerId);
+          if (answer.style.display === "none") {
+              answer.style.display = "block";
+          } else {
+              answer.style.display = "none";
+          }
+      }
+  </script>
+
   </body>
 </html>

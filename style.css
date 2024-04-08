@@ -798,6 +798,33 @@ html {
     color:#e68a00;
 }
 
+.faq {
+  margin-top: 20px;
+  padding: 80px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  font-family: 'Baloo Bhai 2', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq h1 {
+  font-size: 2em;
+}
+
+.question {
+  font-size: 1.1em;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.answer {
+  font-size: 1.1em;
+  text-align: justify;
+  display: none;
+  color: #4B0082;
+}
+
 .map-container {
     width: 400px;
     height: 250px;
