@@ -27,4 +27,13 @@ function isElementInViewport(el) {
   
   // Initially check the elements in view on page load
   document.addEventListener('DOMContentLoaded', handleScroll);
+
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
   

@@ -847,3 +847,93 @@ iframe {
   text-decoration: none;
   font-weight: bold;
 }
+
+button {
+  background: none;
+  width: 5rem;
+  border: none;
+  cursor: pointer;
+  margin-right: 2rem;
+
+}
+.container {
+  border-bottom: 1px solid white;
+  padding-top: 2rem;
+  background-color: #232f3e;
+  margin-bottom: 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-left: 0.5rem;
+  color: white;
+}
+ul{
+  list-style: none;
+  list-style-type: none;
+}
+.question{
+  display: flex;
+  flex-direction: column;
+}
+#question_4,#question_3,#question_2,#question_1{
+  display: flex;
+  justify-content:space-between;
+  gap: 3em;
+  padding-left: 1.5rem;
+ 
+  
+}
+#question_4:hover,#question_3:hover,#question_2:hover,#question_1:hover{
+  background-color:black;
+  opacity: 0.5;
+
+
+
+}
+
+
+
+
+
+
+
+
+.question_ans{
+  display: none;
+  padding: 0rem 1.5rem;
+  text-align: justify;
+}
+
+
+.question_q{
+  background-color: #253e5b;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  }
+svg{
+  fill: white;
+}
+ul {
+  margin-bottom: 0;
+}
+
+p{
+  margin: auto 0;
+}
+.title{
+  text-align: center;
+  font-weight: 800;
+}
+
+@media (min-width:768px){
+  button{
+    width: 4rem;
+  }
+}
+@media (min-width:475px){
+  button{
+    width: 3rem;
+  }
+}
+
