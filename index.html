@@ -22,6 +22,9 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Inter&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <!--FAQ style sheet-->
+    <link rel="stylesheet" href="FAQstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body class="loading">
     <div class="preloader">
@@ -913,6 +916,90 @@
           </div>
         </section>
       </main>
+
+      <!--FAQ Section inserted-->
+      <div class="wrapper">
+        <h1>FAQ</h1>
+        
+        
+        <!--fAQ 1--> 
+        <div class="faq">
+            <button class="accordion">
+                What is AWS?
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="panel">
+                <p>
+                    Amazon Web Services (AWS) is a cloud services platform provided by Amazon, offering a broad set of computing, storage, database, analytics, and other functionality to help businesses scale and grow.
+                </p>
+            </div>
+        </div>
+        <!--fAQ 2--> 
+        <div class="faq">
+            <button class="accordion">
+                Why should I join the AWS Cloud Club?
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="panel">
+                <p>
+                    Joining the AWS Cloud Club can provide you with valuable knowledge and hands-on experience in cloud computing, particularly with AWS services. It's a great way to enhance your skills and network with like-minded individuals.
+                </p>
+            </div>
+        </div>
+        <!--fAQ 3--> 
+        <div class="faq">
+            <button class="accordion">
+                How can I join the AWS Cloud Club?
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="panel">
+                <p>
+                    To join the AWS Cloud Club, you can reach out to the club organizers or visit our website for more information. Membership may require attending meetings, workshops, or fulfilling other participation requirements.
+                </p>
+            </div>
+        </div>
+        <!--fAQ 4--> 
+        <div class="faq">
+            <button class="accordion">
+                What activities does the AWS Cloud Club organize?
+                <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="panel">
+                <p>
+                    The AWS Cloud Club organizes various activities such as workshops, seminars, hackathons, and networking events focused on cloud computing using AWS services. These activities aim to enhance members' skills and provide opportunities for collaboration and learning.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var acc= document.getElementsByClassName ("accordion");
+        var i;
+        for (i=0; i<acc.length; i++){
+            acc[i].addEventListener("click", function(){
+
+                const currActive = document.querySelector("accordion.active");
+                if (currActive && currActive!==acc[i]){
+                    currActive.classList.toggle("active");
+                    currActive.nextElementSibling.style.maxHeight = 0;
+                }
+
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+
+                var panel= this.nextElementSibling;
+
+                if (panel.style.display === "block"){
+                    panel.style.display = "none";
+                }
+                else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+      <!--FAQ Section finished-->
 
       <div class="footer">
         <p>
