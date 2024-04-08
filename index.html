@@ -36,6 +36,7 @@
         <a href="#sponsors">Sponsors</a>
         <a href="#team">Team</a>
         <a href="#venue">Venue</a>
+        <a href="#faq">FAQ</a>
       </div>
 
       <main>
@@ -911,6 +912,57 @@
               ></iframe>
             </div>
           </div>
+        </section> 
+
+        <section id="faq" class="faq-section">
+          <h2 class="sub-heading">FAQ</h2>
+          <h3 class="sub">How can we help you?</h3>
+          <div class="search-box">
+            <input type="text" placeholder="Ask us a question..." class="search-input" id="searchInput">
+            <button class="search-button" onclick="searchFAQ()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <h3 class="sub">or check out the frequently asked questions down below.</h3>
+          
+          <div class="part">
+            <div class="faq-image">
+              <img src="assets/faq.jpg" alt="faq" />
+            </div>
+  
+            <div class="faq-content">
+              <div class="faq-item">
+                <button class="faq-question"> What is AWS Student Community Day?</button>
+                <div class="faq-answer">
+                  AWS Student Community Day is an event organized by the AWS Student Community to bring together students, educators, and professionals to learn and discuss AWS technologies and services.
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">Who can attend the event?</button>
+                <div class="faq-answer">
+                  The event is open to students, educators, professionals, and anyone interested in learning about AWS and networking with like-minded individuals.
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">Is there a registration fee?</button>
+                <div class="faq-answer">
+                  No, the event is free to attend. However, registration is required to reserve your spot.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-question"> What can attendees expect from the AWS Student Community Day?</button>
+                <div class="faq-answer">
+                  Attendees can expect insightful sessions, engaging discussions, hands-on workshops, and networking opportunities tailored to expand their knowledge and proficiency in leveraging AWS solutions. The event will feature talks from industry experts, interactive workshops, and opportunities to connect with peers and AWS representatives to learn, collaborate, and share experiences.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec">
+            <h3>Can't find what</h3>
+            <h3>you are looking for?</h3>
+            <button class="email-button">Email Us</button>
+          </div> 
         </section>
       </main>
 
@@ -986,6 +1038,94 @@
       gtag("js", new Date());
 
       gtag("config", "G-KNX3BXYLTF");
+
+      document.addEventListener("DOMContentLoaded", function() {
+        // Initially show all questions without answers
+        initializeFAQ();
+    
+        // Toggle answer display when clicking on a question
+        let faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach(function(question) {
+            question.addEventListener("click", function() {
+                let faqItem = question.closest('.faq-item');
+                let answer = faqItem.querySelector('.faq-answer');
+    
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+    });
+    
+    function initializeFAQ() {
+        let faqQuestions = document.querySelectorAll(".faq-question");
+        let faqAnswers = document.querySelectorAll(".faq-answer");
+    
+        // Show all questions without answers
+        faqQuestions.forEach(function(question) {
+            let faqItem = question.closest('.faq-item');
+            let answer = faqItem.querySelector('.faq-answer');
+    
+            faqItem.classList.add('show');
+            question.style.color = '';          // Reset the question color
+            answer.style.display = 'none';      // Hide the answer
+        });
+    }
+    
+    function searchFAQ() {
+        let searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        let faqQuestions = document.querySelectorAll(".faq-question");
+        let emailButton = document.querySelector(".email-button");
+    
+        // Hide all answers initially
+        let faqAnswers = document.querySelectorAll(".faq-answer");
+        faqAnswers.forEach(function(answer) {
+            answer.style.display = 'none';      // Hide the answer
+        });
+    
+        // Check if the search input is empty
+        if (!searchTerm.trim()) {
+            initializeFAQ(); // Display all questions without answers
+            return;
+        }
+    
+        // Check for matching questions
+        let foundMatch = false;
+        faqQuestions.forEach(function(question) {
+            let questionText = question.textContent.toLowerCase();
+            let faqItem = question.closest('.faq-item');
+            let answer = faqItem.querySelector('.faq-answer');
+    
+            if (questionText.includes(searchTerm)) {
+                question.scrollIntoView({ behavior: 'smooth' }); // Scroll to the matched question
+                question.focus(); // Set focus on the matched question
+                answer.style.display = 'block'; // Display the answer for the matched question
+                foundMatch = true;
+            } else {
+                faqItem.classList.remove('show');  // Hide the FAQ item
+                answer.style.display = 'none';      // Hide the answer
+            }
+        });
+    
+        // If no match is found, focus on the "Email Us" button
+        if (!foundMatch) {
+            emailButton.focus();
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const emailUsButton = document.querySelector(".email-button");
+  
+      emailUsButton.addEventListener("click", function() {
+          const body = "Please type your message here.";
+  
+          const mailtoLink = `mailto:muskankumari200407@gmail.com?&body=${encodeURIComponent(body)}`;
+  
+          window.location.href = mailtoLink;
+      });
+  });
     </script>
   </body>
 </html>
