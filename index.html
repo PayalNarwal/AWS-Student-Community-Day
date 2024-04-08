@@ -36,6 +36,7 @@
         <a href="#sponsors">Sponsors</a>
         <a href="#team">Team</a>
         <a href="#venue">Venue</a>
+        <a href="#faq">FAQs</a>
       </div>
 
       <main>
@@ -913,79 +914,164 @@
           </div>
         </section>
       </main>
+      <section id="faq" class="faq-section">
+      <div class="wrapper">
+        <br>
+        <h1>Frequently Asked Questions</h1>
 
-      <div class="footer">
-        <p>
-          <a
-            class="icons"
-            href="https://www.instagram.com/awscloudclubigdtuw"
-            target="_blank"
-            ><i class="fab fa-instagram" style="color: rgb(197, 59, 197)"></i
-          ></a>
-          <a
-            class="icons"
-            href="https://www.linkedin.com/company/aws-cloud-club-igdtuw/"
-            target="_blank"
-            ><i class="fab fa-linkedin" style="color: rgb(90, 90, 246)"></i
-          ></a>
-          <a
-            class="icons"
-            href="https://x.com/AWSClubIGDTUW?t=Mv5rpAyBkvI8AGfDC6ayoQ&s=09"
-            target="_blank"
-            ><i class="fab fa-twitter" style="color: rgb(29, 248, 248)"></i
-          ></a>
-          <br />
-          <a
-            class="website"
-            href="https://aceta-minophen.github.io/aws-cloud-club-igdtuw/"
-            target="_blank"
-            >Visit our website</a
-          >
-          <br />
-          <br />
-        </p>
-        <p>
-          &copy; 2024 AWS Cloud Club, IGDTUW. <br />
-          All rights reserved.
-        </p>
-        <p style="font-size: small">
-          ~ Designed & Developed by
-          <a href="https://www.linkedin.com/in/payalnarwal/" target="_blank"
-            >Payal Narwal</a
-          >
-          ~
-        </p>
+      <div class="faq">
+        <button class="accordion">
+          Why you should join us?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Join us for experiencing enlightening speaker sessions featuring certified industry experts, indulge in a delectable spread of team lunches and evening snacks, and expand your cloud knowledge. Connect with like-minded individuals, forging lasting bonds, and anticipate amazing surprises that will make your day truly unforgettable.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          By who and to whom?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            The nine dynamic speakers, including industry experts from AWS, Natwest Group, Accenture, and Capgemini, will deliver enlightening talks to over 250 attendees at the event. These talks cover diverse topics such as career pathways, CI/CD pipelines, cloud basics, generative AI, AWS security, professional landscape, and career guidance. Additionally, participants will have the opportunity to engage in two engaging activities while networking with over 10 seasoned professionals, promising an enriching and memorable experience for all involved.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Are there any charges for joining this event?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Yes, there are charges for joining the event. The Early Bird Ticket for the AWS Cloud Club Student Community Day is priced at ₹100, offering exclusive access to a day filled with enlightening speaker sessions, catered lunch, tech goodies in a swag bag, and networking opportunities. Alternatively, the Regular Ticket is available at ₹150 and provides comprehensive access to the event's offerings. Both ticket options promise a transformative day of learning, inspiration, and networking in the dynamic realm of technology.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          What are the perks available for the participants?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Participants in the AWS Cloud Club Student Community Day event can enjoy several perks, including access to enlightening speaker sessions led by industry experts, a delectable catered lunch, a swag bag filled with tech goodies, and unparalleled networking opportunities with professionals and thought leaders in the tech space. Additionally, attendees have the chance to immerse themselves in insightful talks, fuel up with delicious food, and connect with peers and mentors, enhancing their learning and networking experience.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          What if I have more questions?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            If you have more questions, you can reach out to the event organizers or coordinators directly through their contact information provided on the event's official website or promotional materials. Additionally, you can inquire about any upcoming information sessions or Q&A sessions where you can ask your questions and get clarification. Don't hesitate to engage with the organizers through email, social media channels, or other communication platforms to ensure you have all the information you need to participate or volunteer effectively.
+          </p>
+        </div>
       </div>
     </div>
-    <script src="countdown.js"></script>
-    <script src="./preloader.js"></script>
-    <script src="./spearker_card.js"></script>
-
     <script>
-      const sponsorLogos = document.querySelectorAll(".sponsor-logo");
-      const sponsorCount = sponsorLogos.length;
-      document.documentElement.style.setProperty(
-        "--sponsor-count",
-        sponsorCount
-      );
-      document
-        .querySelector(".sponsor-bar")
-        .appendChild(sponsorLogos[0].cloneNode(true));
-    </script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KNX3BXYLTF"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-KNX3BXYLTF");
     </script>
+    </section>
+
+<div class="footer">
+  <p>
+    <a
+      class="icons"
+      href="https://www.instagram.com/awscloudclubigdtuw"
+      target="_blank"
+      ><i class="fab fa-instagram" style="color: rgb(197, 59, 197)"></i
+    ></a>
+    <a
+      class="icons"
+      href="https://www.linkedin.com/company/aws-cloud-club-igdtuw/"
+      target="_blank"
+      ><i class="fab fa-linkedin" style="color: rgb(90, 90, 246)"></i
+    ></a>
+    <a
+      class="icons"
+      href="https://x.com/AWSClubIGDTUW?t=Mv5rpAyBkvI8AGfDC6ayoQ&s=09"
+      target="_blank"
+      ><i class="fab fa-twitter" style="color: rgb(29, 248, 248)"></i
+    ></a>
+    <br />
+    <a
+      class="website"
+      href="https://aceta-minophen.github.io/aws-cloud-club-igdtuw/"
+      target="_blank"
+      >Visit our website</a
+    >
+    <br />
+    <br />
+  </p>
+  <p>
+    &copy; 2024 AWS Cloud Club, IGDTUW. <br />
+    All rights reserved.
+  </p>
+  <p style="font-size: small">
+    ~ Designed & Developed by
+    <a href="https://www.linkedin.com/in/payalnarwal/" target="_blank"
+      >Payal Narwal</a
+    >
+    ~
+  </p>
+</div>
+</div>
+<script src="countdown.js"></script>
+<script src="./preloader.js"></script>
+<script src="./spearker_card.js"></script>
+
+<script>
+const sponsorLogos = document.querySelectorAll(".sponsor-logo");
+const sponsorCount = sponsorLogos.length;
+document.documentElement.style.setProperty(
+  "--sponsor-count",
+  sponsorCount
+);
+document
+  .querySelector(".sponsor-bar")
+  .appendChild(sponsorLogos[0].cloneNode(true));
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script
+async
+src="https://www.googletagmanager.com/gtag/js?id=G-KNX3BXYLTF"
+></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+
+gtag("config", "G-KNX3BXYLTF");
+</script>
   </body>
+
 </html>
