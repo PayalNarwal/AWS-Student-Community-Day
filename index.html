@@ -912,6 +912,46 @@
             </div>
           </div>
         </section>
+        <section id = "faqs"> 
+          <div class="faq-container"> 
+            <h2 style="text-align: center; text-decoration: underline 2px solid rgb(130, 79, 179);">Frequently Asked Questions</h2> 
+           
+            <div class="question">Q: What is AWS Cloud Club at IGDTUW?</div> 
+            <div class="answer">Answer: The AWS Cloud Club at IGDTUW is a student organization dedicated to promoting knowledge and skills related to cloud computing using Amazon Web Services (AWS).</div> 
+           
+            <div class="question">Q: How can I join AWS Cloud Club at IGDTUW?</div> 
+            <div class="answer">Answer: To join AWS Cloud Club at IGDTUW, you can reach out to the club coordinators or attend their recruitment events.</div> 
+           
+            <div class="question">Q: What activities does AWS Cloud Club at IGDTUW organize?</div> 
+            <div class="answer">Answer: AWS Cloud Club at IGDTUW organizes workshops, seminars, hackathons, and other events to help students learn about AWS services, cloud computing concepts, and real-world applications.</div> 
+           
+            <div class="question">Q: What are the benefits of joining AWS Cloud Club at IGDTUW?</div> 
+            <div class="answer">Answer: Joining AWS Cloud Club at IGDTUW provides opportunities to enhance your cloud computing skills, network with industry professionals, and participate in hands-on projects.</div> 
+           
+            <div class="question">Q: Can beginners join AWS Cloud Club at IGDTUW?</div> 
+            <div class="answer">Answer: Yes, AWS Cloud Club at IGDTUW welcomes students of all skill levels, including beginners who are interested in learning about cloud computing and AWS services.</div> 
+           
+            <div class="question">Q: What resources does AWS Cloud Club at IGDTUW provide for its members?</div> 
+            <div class="answer">Answer: AWS Cloud Club at IGDTUW offers access to AWS credits, learning materials, and online resources to support members in their cloud computing journey.</div> 
+           
+            <div class="question">Q: Are there any prerequisites for joining AWS Cloud Club at IGDTUW?</div> 
+            <div class="answer">Answer: No specific prerequisites are required for joining AWS Cloud Club at IGDTUW. Students from all disciplines with an interest in cloud computing are encouraged to participate.</div> 
+           
+          </div> 
+           
+          <script> 
+            // Get all question elements 
+            const questions = document.querySelectorAll('.question'); 
+           
+            // Add click event listener to each question 
+            questions.forEach(question => { 
+              question.addEventListener('click', () => { 
+                const answer = question.nextElementSibling; // Get the next sibling which is the answer 
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block'; // Toggle answer display 
+              }); 
+            }); 
+          </script> 
+        </section>
       </main>
 
       <div class="footer">

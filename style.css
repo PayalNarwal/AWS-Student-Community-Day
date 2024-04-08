@@ -847,3 +847,25 @@ iframe {
   text-decoration: none;
   font-weight: bold;
 }
+
+#faqs { 
+  margin: 2rem; 
+} 
+ 
+.faq-container { 
+  border-radius: 30px; 
+  font-size: 1.1rem; 
+  max-width: 600px; 
+  margin: 0 auto; 
+} 
+.question { 
+  cursor: pointer; 
+  padding: 10px 10px; 
+  border-bottom: 1px solid #7f7979; 
+} 
+.answer { 
+  display: none; 
+  padding: 10px 10px; 
+  border: 1px solid black; 
+  color: rgb(72, 7, 133); 
+}
