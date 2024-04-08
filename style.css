@@ -6,6 +6,9 @@ body {
   line-height: 1.6;
   position: relative;
   overflow-x: hidden;
+ 
+ 
+
 }
 
 html {
@@ -846,4 +849,88 @@ iframe {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  color: #f8f8f8;
+
+}
+/* .accordion-container {
+  background:  #233141; /* Replace 'background-image.jpg' with your image path */
+  /* background-size: cover;
+  background-position: center;
+  color: #f2f2f2;
+
+
+}  */
+.accordion {
+  width: 100%;
+  max-width: 1050px;
+  height: 100%;
+  margin: 2rem auto;
+  background-image: url("./assets/bg-images/animation1.gif");/* Replace 'background-image.jpg' with your image path */
+background-position: center;
+padding-left: 230px;
+  padding-bottom: 10px;
+  padding-right: 500px;
+}
+
+.accordion-item {
+  background-color: #ffffff;
+  color: #111;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item:hover {
+  background-color: #dfdddd; /* Change background color on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  background:#ff9900;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
 }
