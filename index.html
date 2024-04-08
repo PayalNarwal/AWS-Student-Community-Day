@@ -914,6 +914,45 @@
         </section>
       </main>
 
+
+      <section class="faq-section">
+        <div class="faq-container">
+          <h2 class="sub-heading">FAQ</h2>
+          <div class="faq-item">
+            <h3 class="question">What is AWS Cloud Club?</h3>
+            <div class="answer">
+              <p>
+                The AWS Cloud Club is a community-based organization dedicated to fostering
+                education and creativity in cloud computing advancements, with a specific emphasis on AWS (Amazon Web Services) technology.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="question">How can I stay updated about event announcements and changes</h3>
+            <div class="answer">
+              <p>
+              We recommend following our official social media channels and subscribing to our newsletter for the latest updates and announcements regarding the event.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="question">What are the prerequisites for attending the event?</h3>
+            <div class="answer">
+              <p>
+                This will vary depending on the nature of the event. Some events may require specific qualifications or prior knowledge, while others may be open to all              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <h3 class="question">Are there any networking or social events associated with the main event?</h3>
+            <div class="answer">
+              <p>
+                Yes, we often organize networking sessions, social events, and after-parties to provide attendees with opportunities to connect and engage with peers, speakers, and sponsors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div class="footer">
         <p>
           <a
@@ -987,5 +1026,21 @@
 
       gtag("config", "G-KNX3BXYLTF");
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach(function (question) {
+      question.addEventListener("click", function () {
+        question.classList.toggle("active");
+        const answer = question.nextElementSibling;
+        answer.classList.toggle("active");
+      });
+    });
+  });
+</script>
+
+
   </body>
 </html>
