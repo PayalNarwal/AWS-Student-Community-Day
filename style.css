@@ -605,7 +605,6 @@ html {
 }
 
 
-
 /*  team  */
 #team h2 {
   color: #232f3e;
@@ -640,8 +639,6 @@ html {
   position: relative;
   object-fit: cover;
 }
-
-
 
 .profile-info {
   text-align: center;
@@ -846,4 +843,85 @@ iframe {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*faq-section*/
+.faq{
+  background-image: url("./assets/bg-images/animation1.gif");
+padding-bottom: 15px;
+padding-top: 5px;
+color:#fff;
+}
+
+.layout {
+  width:70%;
+  margin: auto;
+  border-radius: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.accordion {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(to left, #112c4a, #4477CE,#112c4a);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion__question {
+  position: relative; /* Ensure the dropdown icon is positioned relative to the question */
+  color:#ffffff;
+  border-radius: 5px;
+}
+
+.accordion__question p {
+  margin: 5px;
+  padding: 0;
+  font-family: Verdana;
+  font-size: 15px;
+}
+
+.accordion__answer p {
+  margin: 5px;
+  padding: 10px;
+  font-size:medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(to left,  #4477CE,#ffffff,#4477CE);
+  border-radius: 10px;
+}
+
+.dropdown-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.accordion__answer {
+  display: none;
+}
+
+.accordion__answer.show {
+  display: block;
 }

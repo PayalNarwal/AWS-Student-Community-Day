@@ -36,6 +36,7 @@
         <a href="#sponsors">Sponsors</a>
         <a href="#team">Team</a>
         <a href="#venue">Venue</a>
+        <a href="#faq">FAQ's</a>
       </div>
 
       <main>
@@ -913,7 +914,53 @@
           </div>
         </section>
       </main>
+<section id ="faq" class="faq">
+      <h2 style="color:#ffffff; text-align:center">
+        Frequently Asked Questions
+      </h2>
+      <div class="layout">
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>Who can attend AWS Student Community Day?</p>
+            <img class="dropdown-icon" src="assets/Faq Section/down-arrow.png" alt="dropdown icon">
+          </div>
+          <div class="accordion__answer">
+            <p>The event is open to students, professionals, and anyone interested in learning more about AWS cloud services.</p>
+          </div>
+        </div>
 
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>What can I expect from AWS Student Community Day?</p>
+            <img class="dropdown-icon" src="assets/Faq Section/down-arrow.png" alt="dropdown icon">
+          </div>
+          <div class="accordion__answer">
+            <p>Attendees can expect insightful speaker sessions by industry experts, engaging discussions on cloud computing topics, hands-on workshops to gain practical experience with AWS services, networking opportunities, and exciting surprises.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>How can I stay updated on AWS Student Community Day announcements and updates?</p>
+            <img class="dropdown-icon" src="assets/Faq Section/down-arrow.png" alt="dropdown icon">
+          </div>
+          <div class="accordion__answer">
+            <p>Stay connected with AWS Cloud Club, IGDTUW on social media channels and visit the event website for the latest announcements, updates, and important information regarding AWS Student Community Day 2024.</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>How can I register for AWS Student Community Day?</p>
+            <img class="dropdown-icon" src="assets/Faq Section/down-arrow.png" alt="dropdown icon">
+          </div>
+          <div class="accordion__answer">
+            <p>
+              Registration details will be provided closer to the event date. Keep an eye on the event website or official communications from AWS for registration instructions.
+            </p>
+          </div>
+        </div>
+      </div>
+</section>
       <div class="footer">
         <p>
           <a
@@ -979,13 +1026,29 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-KNX3BXYLTF"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-KNX3BXYLTF");
-    </script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const accordions = document.querySelectorAll('.accordion');
+      
+        accordions.forEach(accordion => {
+          const accordionQuestion = accordion.querySelector('.accordion__question');
+          const accordionAnswer = accordion.querySelector('.accordion__answer');
+      
+          accordionQuestion.addEventListener('click', function() {
+            accordionAnswer.classList.toggle('show');
+            const dropdownIcon = this.querySelector('.dropdown-icon');
+            dropdownIcon.classList.toggle('rotate');
+          });
+      
+          // Optionally, you can also toggle visibility when clicking the dropdown icon
+          const dropdownIcon = accordionQuestion.querySelector('.dropdown-icon');
+          dropdownIcon.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the question
+            accordionAnswer.classList.toggle('show');
+            this.classList.toggle('rotate');
+          });
+        });
+      });
+  </script>
+</body>
   </body>
 </html>
