@@ -11,6 +11,7 @@
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
       crossorigin="anonymous"
     />
+   
     <link
       rel="shortcut icon"
       href="assets/aws-cloud-club-logo.svg"
@@ -954,6 +955,41 @@
           </script>
         </section>
       </main>
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <button id="faq-button-1" aria-expanded="false"><span class="faq-title">Why should you join us?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="faq-content">
+              <p>We promise you a day filled with gaining industry knowledge and networking. </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button id="faq-button-2" aria-expanded="false"><span class="faq-title">Are there any charges for joining this event?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="faq-content">
+              <p>Yes, there is a registration fee of Rs.100 .</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button id="faq-button-3" aria-expanded="false"><span class="faq-title">How do join as a volunteer ?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="faq-content">
+              <p>To join us as volunteer, fill the google form in the bio of our instagram handle.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button id="faq-button-4" aria-expanded="false"><span class="faq-title">What is the code of conduct for the event?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="faq-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button id="faq-button-3" aria-expanded="false"><span class="faq-title">What are the perks available to the participants?</span><span class="icon" aria-hidden="true"></span></button>
+            <div class="faq-content">
+              <p>Participants will gain knowledgable insights from top industry leaders, goodies and refreshments as well.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="footer">
         <p>
@@ -1027,6 +1063,32 @@
       gtag("js", new Date());
 
       gtag("config", "G-KNX3BXYLTF");
+    </script>
+    <script>
+      const items = document.querySelectorAll(".faq button");
+      
+
+
+items.forEach(button => {
+  button.addEventListener('click', () => {
+   
+    button.blur();
+  });
+});
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
     </script>
   </body>
 </html>
