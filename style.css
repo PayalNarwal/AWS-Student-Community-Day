@@ -811,6 +811,64 @@ html {
     /* overflow: hidden; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+@faqs
+h1{
+  font-size: 40px;
+  font-weight: bolder;
+  color: #ff9900;
+  padding: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.body {
+  background-color: #161e2d;
+}
+
+.accordion {
+  margin: 100px auto;
+  width: 600px;
+}
+
+.accordion li {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.accordion li label {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ff9900;
+}
+
+.accordion li label span {
+  transform: rotate(90deg);
+  font-size: 22px;
+  columns: #333;
+}
+
+.accordion label + input[type="radio"] {
+  display: none;
+}
+.accordion .content {
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.accordion label + input[type="radio"]:checked .content {
+  max-height: 400px;
+}
 
 iframe {
     width: 100%;
